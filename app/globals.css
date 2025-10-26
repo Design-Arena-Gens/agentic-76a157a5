@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020; /* Deep indigo/blue for modern dark base */
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-[#0b1020] text-white antialiased;
+}
+
+/* Subtle scrollbar */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
+* { scrollbar-color: rgba(255,255,255,0.12) transparent; scrollbar-width: thin; }
+
+.container-max { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+.card {
+  @apply bg-white/5 backdrop-blur border border-white/10 rounded-xl shadow-card;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80;
+}
+
+.muted { @apply text-white/70; }
